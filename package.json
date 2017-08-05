@@ -12,7 +12,7 @@
   "scripts": {
     "start": "babel-node ./lib/index.js",
     "test": "jscs .",
-    "prepublish": "babel ./lib/ -d ./bin/"
+    "prepare": "babel ./lib/ -d ./bin/"
   },
   "bin": "./bin/index.js",
   "repository": {
