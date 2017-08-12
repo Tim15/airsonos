@@ -8,10 +8,10 @@ WORKDIR /airsonos
 
 RUN apk add --no-cache git make gcc g++ python avahi sudo avahi-dev
 
-COPY package.json .
 ADD lib lib
 ADD bin bin
 COPY index.js .
+COPY package.json .
 COPY package-lock.json .
 
 RUN sudo npm install --unsafe-perm
