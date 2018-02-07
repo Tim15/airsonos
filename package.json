@@ -23,7 +23,7 @@
     "babel": "^5.8.21",
     "bluebird": "^2.9.34",
     "flags": "~0.1.2",
-    "ip": "1.1.0",
+    "ip": "1.1.4",
     "nicercast": "0.1.0",
     "nodetunes": "git://github.com/Kolky/nodetunes.git#master",
     "sonos": "git://github.com/smlomas/node-sonos.git#stephen-1.0.0"
