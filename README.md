@@ -18,3 +18,11 @@ Swan (@ 192.168.0.1:1400, RINCON_B8E9375433D201400:1)
 
 Search complete. Set up 1 device tunnel.
 ```
+
+Run the airsonos script as daemon
+-------------
+```
+$ npm install -g forever
+$ forever start /usr/local/bin/airsonos
+$ forever list
+```
