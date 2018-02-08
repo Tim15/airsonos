@@ -1,7 +1,7 @@
-An AirSonos fork that actually works :)
+An AirSonos fork that actually works
 ========
 
-AirSonos is a server that adds Apple [AirPlay](https://www.apple.com/airplay/) (iOS, OS X) support to all Sonos devices on a network.
+AirSonos is a little server that allows [AirPlay](https://www.apple.com/airplay/) streaming to the Sonos devices on your network.
 
 Install nodejs8, npm and some dependencies:
 ```
@@ -14,13 +14,19 @@ Install airsonos globally via npm:
 $ npm install -g jmtatsch/airsonos
 ```
 
-Test if airsonos works:
+Test if airsonos works as expected:
 -------------
 ```
 $ airsonos
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
 Searching for Sonos devices on network...
 
-Swan (@ 192.168.0.1:1400, RINCON_B8E9375433D201400:1)
+Schlafzimmer (@ 192.168.181.28:1400, RINCON_000E58CC251201400:5)
 
 Search complete. Set up 1 device tunnel.
 ```
@@ -85,7 +91,7 @@ Feb 08 05:35:40 homeserver airsonos[21871]: Schlafzimmer (@ 192.168.181.28:1400,
 Feb 08 05:35:40 homeserver airsonos[21871]: Search complete. Set up 1 device tunnel.
 ```
 
-Enable the airsonos to start automatically on reboot in the future:
+If the service starts up sucessfully, you can enable it to start automatically on reboot in the future:
 ```
 $ sudo systemctl enable airsonos
 ```
